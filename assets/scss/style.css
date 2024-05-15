@@ -806,32 +806,6 @@ section {
   }
 }
 /*--------------------------------------------------------------
-# Clients
---------------------------------------------------------------*/
-.clients .swiper-pagination {
-  margin-top: 20px;
-  position: relative;
-}
-.clients .swiper-pagination .swiper-pagination-bullet {
-  width: 12px;
-  height: 12px;
-  background-color: #fff;
-  opacity: 1;
-  border: 1px solid #Bf9553;
-}
-.clients .swiper-pagination .swiper-pagination-bullet-active {
-  background-color: #Bf9553;
-}
-.clients .swiper-slide img {
-  opacity: 0.5;
-  filter: grayscale(100%);
-}
-.clients .swiper-slide img:hover {
-  filter: none;
-  opacity: 1;
-}
-
-/*--------------------------------------------------------------
 # Services
 --------------------------------------------------------------*/
 .services .icon-box {
@@ -858,7 +832,7 @@ section {
   text-align: center;
   width: 72px;
   height: 72px;
-  background: #Bf9553;
+  background: #66369D;
 }
 .services .icon i {
   color: #fff;
@@ -875,8 +849,8 @@ section {
   color: #343a40;
 }
 .services .icon-box:hover .icon {
-  background: #fff;
-  border: 2px solid #Bf9553;
+  background: #66369D;
+  border: 2px solid #66369D;
 }
 .services .icon-box:hover .icon i {
   color: #Bf9553;

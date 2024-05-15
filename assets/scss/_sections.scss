@@ -319,41 +319,8 @@ section {
   }
 }
 
-/*--------------------------------------------------------------
-# Clients
---------------------------------------------------------------*/
-.clients {
 
-  .swiper-pagination {
-    margin-top: 20px;
-    position: relative;
-  
-    .swiper-pagination-bullet {
-      width: 12px;
-      height: 12px;
-      background-color: #fff;
-      opacity: 1;
-      border: 1px solid $primary;
-    }
-  
-    .swiper-pagination-bullet-active {
-      background-color: $primary;
-    }
-  }
 
-  .swiper-slide {
-
-    img {
-      opacity: 0.5;
-      filter: grayscale(100%);
-      &:hover {
-        filter: none;
-        opacity: 1;
-      }
-    }
-  }
-
-}
 
 /*--------------------------------------------------------------
 # Services
@@ -385,7 +352,7 @@ section {
     text-align: center;
     width: 72px;
     height: 72px;
-    background: $primary;
+    background: $secondary;
 
     i {
       color: $white;
@@ -406,9 +373,9 @@ section {
 
   .icon-box:hover  {
     .icon {
-      background: $white;
+      background: $secondary;
   
-      border: 2px solid $primary;
+      border: 2px solid $secondary;
       i {
         color: $primary;
       }
