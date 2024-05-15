@@ -10,21 +10,41 @@ section {
   background-color: lighten($primary, 42);
 }
 
+
 .section-title {
   text-align: center;
   padding-bottom: 30px;
-  h2 {
-    font-size: 32px;
-    font-weight: 500;
-    margin-bottom: 20px;
-    padding-bottom: 0;
-    font-family: $font-secondary;
-    color: lighten($secondary, 10);
-  }
-  p {
-    margin-bottom: 0;
-  }
 }
+.section-title h2 {
+  font-size: 22px;
+  font-weight: bold;
+  text-transform: uppercase;
+  margin-bottom: 5px;
+  padding-bottom: 10px;
+  position: relative;
+  color: rgb(56, 56, 56);
+}
+.section-title h2::before {
+  content: "";
+  position: absolute;
+  display: block;
+  width: 120px;
+  height: 1px;
+  background: #ddd;
+  bottom: 1px;
+  left: calc(50% - 60px);
+}
+.section-title h2::after {
+  content: "";
+  position: absolute;
+  display: block;
+  width: 40px;
+  height: 3px;
+  background: #d4af37;
+  bottom: 0;
+  left: calc(50% - 20px);
+}
+
 
 /*--------------------------------------------------------------
 # Breadcrumbs
@@ -570,390 +590,7 @@ section {
 
 }
 
-/*--------------------------------------------------------------
-# Portfolio
---------------------------------------------------------------*/
-.portfolio {
 
-  #portfolio-flters {
-    padding:0;
-    margin:0 auto 35px auto;
-    list-style:none;
-    text-align:center;
-    border-radius: 50px;
-    padding: 2px 15px;
-
-    li {
-      cursor: pointer;
-      display: inline-block;
-      padding: 10px 20px 12px 20px;
-      font-size: 14px;
-      font-weight: 600;
-      line-height: 1;
-      text-transform: uppercase;
-      color: $default;
-      margin-bottom: 5px;
-      transition: all 0.3s ease-in-out;
-      border-radius: 50px;
-
-      &:hover, &.filter-active {
-        color: $primary;
-        background: lighten($primary, 40);
-      }
-
-      &:last-child {
-        margin-right: 0;
-      }
-    }
-  }
-
-  .portfolio-item {
-    margin-bottom: 30px;
-
-    .portfolio-info {
-      opacity: 0;
-      position: absolute;
-      left: 30px;
-      right: 30px;
-      bottom: 0;
-      z-index: 3;
-      transition: all ease-in-out 0.3s;
-      background: rgba($white, .9);
-      padding: 15px;
-
-      h4 {
-        font-size: 18px;
-        color: $white;
-        font-weight: 600;
-        color: $secondary;
-      }
-
-      p {
-        color: lighten($secondary, 20);
-        font-size: 14px;
-        margin-bottom: 0;
-      }
-
-      .preview-link, .details-link {
-        position: absolute;
-        right: 40px;
-        font-size: 24px;
-        top: calc(50% - 18px);
-        color: lighten($secondary, 10);
-        &:hover {
-          color: $primary;
-        }
-      }
-
-      .details-link {
-        right: 10px;
-      }
-      
-    }
-
-    .portfolio-links {
-      opacity: 0;
-      left: 0;
-      right: 0;
-      text-align: center;
-      z-index: 3;
-      position: absolute;
-      transition: all ease-in-out 0.3s;
-
-      a {
-        color: $white;
-        margin: 0 2px;
-        font-size: 28px;
-        display: inline-block;
-        transition: 0.3s;
-
-        &:hover {
-          color: lighten($primary, 20);
-        }
-      }
-
-    }
-
-    &:hover {
-      .portfolio-info {
-        opacity: 1;
-        bottom: 20px;
-      }
-    }
-  }
-}
-
-/*--------------------------------------------------------------
-# Portfolio Details
---------------------------------------------------------------*/
-.portfolio-details {
-
-  padding-top: 20px;
-
-  .portfolio-details-slider {
-    img {
-      width: 100%;
-    }
-    .swiper-pagination {
-      margin-top: 20px;
-      position: relative;
-
-      .swiper-pagination-bullet {
-        width: 12px;
-        height: 12px;
-        background-color: #fff;
-        opacity: 1;
-        border: 1px solid $primary;
-      }
-
-      .swiper-pagination-bullet-active {
-        background-color: $primary;
-      }
-    }
-
-  }
-
-  .portfolio-info {
-    padding: 30px;
-    box-shadow: 0px 0 30px rgba($secondary, 0.08);
-
-    h3 {
-      font-size: 22px;
-      font-weight: 700;
-      margin-bottom: 20px;
-      padding-bottom: 20px;
-      border-bottom: 1px solid #eee;
-    }
-
-    ul {
-      list-style: none;
-      padding: 0;
-      font-size: 15px;
-
-      li +li {
-        margin-top: 10px;
-      }
-    }
-    
-  }
-
-  .portfolio-description {
-    padding-top: 30px;
-    
-    h2 {
-      font-size: 26px;
-      font-weight: 700;
-      margin-bottom: 20px;
-    }
-
-    p {
-      padding: 0;
-    }
-  }
-
-}
-
-/*--------------------------------------------------------------
-# Team
---------------------------------------------------------------*/
-.team {
-
-  .member {
-    margin-bottom: 20px;
-    overflow: hidden;
-    text-align: center;
-    border-radius: 5px;
-    background: $white;
-    box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.10);
-    
-    .member-img {
-      position: relative;
-      overflow: hidden;
-    }
-
-    .social {
-      position: absolute;
-      left: 0;
-      bottom: 0;
-      right: 0;
-      height: 40px;
-      opacity: 0;
-      transition: ease-in-out 0.3s;
-      background: rgba($white, 0.85);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-
-      a {
-        transition: color 0.3s;
-        color: $secondary;
-        margin: 0 10px;
-        display: inline-flex;
-        align-items: center;
-        justify-content: center;
-
-        &:hover {
-          color: $primary;
-        }
-
-      }
-
-      i {
-        font-size: 18px;
-        line-height: 0;
-      }
-    }
-
-    .member-info {
-      padding: 25px 15px;
-      h4 {
-        font-weight: 700;
-        margin-bottom: 5px;
-        font-size: 18px;
-        color: $secondary;
-      }
-  
-      span {
-        display: block;
-        font-size: 13px;
-        font-weight: 400;
-        color: lighten($default, 40);
-      }
-
-      p {
-        font-style: italic;
-        font-size: 14px;
-        line-height: 26px;
-        color: lighten($default, 20);
-      }
-
-    }
-
-    &:hover {
-
-      .social {
-        opacity: 1;
-      }
-    }
-
-  }
-}
-
-/*--------------------------------------------------------------
-# Pricing
---------------------------------------------------------------*/
-.pricing {
-
-  .box {
-    padding: 20px;
-    background: #fff;
-    text-align: center;
-    box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.12);
-    border-radius: 5px;
-    position: relative;
-    overflow: hidden;
-  }
-
-  h3 {
-    font-weight: 400;
-    margin: -20px -20px 20px -20px;
-    padding: 20px 15px;
-    font-size: 16px;
-    font-weight: 600;
-    color: lighten($default, 20);
-    background: #f8f8f8;
-  }
-
-  h4 {
-    font-size: 36px;
-    color: $primary;
-    font-weight: 600;
-    font-family: $font-secondary;
-    margin-bottom: 20px;
-
-    sup {
-      font-size: 20px;
-      top: -15px;
-      left: -3px;
-    }
-
-    span {
-      color: #bababa;
-      font-size: 16px;
-      font-weight: 300;
-    }
-  }
-
-  ul {
-    padding: 0;
-    list-style: none;
-    color: $default;
-    text-align: center;
-    line-height: 20px;
-    font-size: 14px;
-
-    li {
-      padding-bottom: 16px;
-    }
-
-    i {
-      color: $primary;
-      font-size: 18px;
-      padding-right: 4px;
-    }
-    .na {
-      color: #ccc;
-      text-decoration: line-through;
-    }
-  }
-
-  .btn-wrap {
-    margin: 20px -20px -20px -20px;
-    padding: 20px 15px;
-    background: #f8f8f8;
-    text-align: center;
-  }
-
-  .btn-buy {
-    background: $primary;
-    display: inline-block;
-    padding: 6px 35px 8px 35px;
-    border-radius: 4px;
-    color: #fff;
-    transition: none;
-    font-size: 14px;
-    font-weight: 400;
-    font-family: $font-primary;
-    font-weight: 600;
-    box-shadow: 0 3px 7px rgba($primary, 0.4);
-    transition: 0.3s;
-    &:hover {
-      background: lighten($primary, 10);
-    }
-  }
-
-  .featured {
-    h3 {
-      color: $white;
-      background: $primary;
-      box-shadow: 0 3px 7px rgba($primary, 0.4)
-    }
-  }
-
-  .advanced {
-    width: 200px;
-    position: absolute;
-    top: 18px;
-    right: -68px;
-    transform: rotate(45deg);
-    z-index: 1;
-    font-size: 14px;
-    padding: 1px 0 3px 0;
-    background: $primary;
-    color: $white;
-  }
-
-}
 
 /*--------------------------------------------------------------
 # F.A.Q

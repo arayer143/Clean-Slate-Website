@@ -3,13 +3,35 @@
 --------------------------------------------------------------*/
 #hero {
   width: 100%;
-  height: 60vh;
-  background: url("../img/hero-bg.jpg") center center;
-  background-size: cover;
+  height: 90vh;
+  background: linear-gradient(-35deg, #522888, #Bf9553 , #66369D  );
+  background-size: 200% 200%;
+ -webkit-animation: Animation 10s ease infinite;
+  -moz-animation: Animation 10s ease infinite;
+  animation: Animation 10s ease infinite;
   position: relative;
   z-index: 1;
   padding: 0;
   margin-bottom: -120px;
+
+  @-webkit-keyframes Animation {
+    0%{background-position:10% 0%}
+    50%{background-position:90% 100%}
+    100%{background-position:10% 0%}
+  }
+  @-moz-keyframes Animation {
+    0%{background-position:10% 0%}
+    50%{background-position:90% 100%}
+    100%{background-position:10% 0%}
+  }
+  @keyframes Animation { 
+    0%{background-position:10% 0%}
+    50%{background-position:90% 100%}
+    100%{background-position:10% 0%}
+  }
+
+
+
 
   &:before {
     content: "";
@@ -40,20 +62,17 @@
     font-size: 24px;
   }
 
-  .get-started-icon {
-    font-size: 24px;
-    background: $primary;
-    padding: 14px;
-    color: $white;
-    border-radius: 50px;
-    position: relative;
-    z-index: 5;
-    box-shadow: 10px 2px 15px rgba(0, 0, 0, 0.10);
+
+
+  img{
+    max-height: 250px;
   }
+
 
   .btn-get-started {
     font-family: $font-primary;
-    font-weight: 400;
+    font-weight: 600;
+    margin-right: 1rem;
     font-size: 16px;
     letter-spacing: 1px;
     display: inline-block;
@@ -62,7 +81,7 @@
     padding: 8px 26px 8px 26px;
     color: #fff;
     background: lighten($secondary, 6);
-    border-radius: 0 50px 50px 0;
+    border-radius: 3rem;
     position: relative;
     z-index: 4;
     &:hover {
@@ -70,17 +89,19 @@
     }
   }
 
+  
+
   @media (min-width: 1024px){
     background-attachment: fixed;
   }
 
   @media (max-width: 1024px),  (max-height: 768px) {
     margin-bottom: -150px;
-    height: 80vh;
+    height: 110vh;
   }
 
   @media (max-width: 768px) {
-    height: 80vh;
+    height: 100vh;
     h1 {
       font-size: 28px;
       line-height: 36px;

@@ -6,6 +6,11 @@ body {
   color: $default;
 }
 
+
+body::-webkit-scrollbar{
+  display: none;
+}
+
 a {
   color: $primary;
   text-decoration: none;
@@ -19,6 +24,47 @@ a:hover  {
 h1, h2, h3, h4, h5, h6 {
   font-family: $font-primary;
 }
+
+
+.title-decoration {
+  position: relative;
+  display: block;
+  margin: auto;
+  width: 240px;
+  margin-top: 2rem;
+  
+  &::before,
+  &::after{
+      content: '';
+      position: absolute;
+      top: 17.5px;
+      display: block;
+      height: 1px;
+      width: 92px;
+      background-color: #aaa;
+  }
+  &::after {
+      right: 0;
+  }
+  
+  i[class*="fa"] {
+      display: block;
+      margin: auto;
+      width: 36px;
+      height: 36px;
+      border: 1px solid teal;
+      border-radius: 50%;
+      font-size: 18px;
+      font-style: normal;
+      text-align: center;
+      line-height: 35px;
+      color: black;
+  }
+}
+
+
+
+
 
 /*--------------------------------------------------------------
 # Back to top button
