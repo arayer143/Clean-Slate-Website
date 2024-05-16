@@ -149,4 +149,28 @@
       }
     }
   }
+
+
+  .copyright{
+    button{
+      border-radius: 2rem;
+      color: $white;
+      background: $primary;
+      padding: 5px 10px;
+      display: inline-block;
+      transition: 0.3s;
+
+      &:hover {
+        background: lighten($primary, 5);
+      }
+    }
+
+    a{
+      color: #fff;
+    }
+
+    }
+
+
+  
 }
