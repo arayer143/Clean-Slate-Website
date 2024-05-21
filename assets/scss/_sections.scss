@@ -488,6 +488,7 @@ section {
   .section-title p{
     margin-top: 1rem;
     color: white;
+
   }
 
   .testimonials-carousel, .testimonials-slider {
@@ -495,16 +496,20 @@ section {
     background-color: whitesmoke;
     max-width: 500px;
     border-radius: 2rem;
+    padding: 4px;
+    margin: auto;
     
   }
 
   .testimonial-item {
     text-align: center;
-    color: black;
+    color: black; 
+    padding: 10px;
 
 
     h2{
       color: black;
+      margin-bottom: 2rem;
     }
 
     h3 {
@@ -545,6 +550,8 @@ section {
       color: black;
       font-size: medium;
       max-width: 500px;
+     
+   
     }
 
   }
@@ -567,8 +574,15 @@ section {
   }
 
   @media (min-width: 992px) {
+
+.testimonial-item{
+  padding: 50px;
+}
+
     .testimonial-item p {
-      width: 80%;
+      padding: 10px;
+      margin-left: 15px;
+      margin-right: 15px;
     } 
   }
 
