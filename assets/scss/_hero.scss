@@ -72,17 +72,18 @@
   .btn-get-started {
     font-family: $font-primary;
     font-weight: 600;
-    margin-right: 1rem;
+    margin-right: .5rem;
     font-size: 16px;
     letter-spacing: 1px;
     display: inline-block;
     transition: 0.5s;
-    margin-left: -10px;
-    padding: 8px 26px 8px 26px;
+    margin-top: 1rem;
+    text-align: center;
+    padding: 10px 26px 8px 26px;
     color: #fff;
     background: lighten($secondary, 6);
     border-radius: 3rem;
-    position: relative;
+  
     z-index: 4;
     &:hover {
       background: $primary;
