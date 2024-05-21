@@ -407,6 +407,12 @@ section {
     background-repeat: no-repeat;
     background-position: center center;
   }
+  
+
+  @media (min-width: 824px){
+    background-attachment: Cover;
+  }
+
 
   .card-body {
     z-index: 10;
@@ -498,21 +504,25 @@ section {
       margin: 0 auto;
     }
 
+    h2{
+      color: black;
+    }
+
     h3 {
-      font-size: 20px;
+      font-size: 30px;
       font-weight: bold;
       margin: 10px 0 5px 0;
-      color: $white;
+      color: $black;
     }
 
     h4 {
       font-size: 14px;
-      color: #ddd;
+      color: black;
       margin: 0 0 15px 0;
     }
 
     .quote-icon-left, .quote-icon-right {
-      color: rgba($white, .4);
+      color: black;
       font-size: 26px;
     }
 
@@ -532,7 +542,8 @@ section {
     p {
       font-style: italic;
       margin: 0 auto 15px auto;
-      color: #eee;
+      color: black;
+      max-width: 500px;
     }
 
   }
@@ -549,7 +560,7 @@ section {
     }
   
     .swiper-pagination-bullet-active {
-      background-color: $primary;
+      background-color: $secondary;
     }
   }
 
