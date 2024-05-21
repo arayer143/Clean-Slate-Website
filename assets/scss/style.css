@@ -1152,6 +1152,7 @@ section {
 --------------------------------------------------------------*/
 .gallery {
   margin-top: 40px;
+  background: whitesmoke;
 }
 .gallery .gallery-item {
   position: relative;
