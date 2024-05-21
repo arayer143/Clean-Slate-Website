@@ -875,11 +875,6 @@ section {
   background-repeat: no-repeat;
   background-position: center center;
 }
-@media (min-width: 824px) {
-  .values {
-    background-attachment: Cover;
-  }
-}
 .values .card-body {
   z-index: 10;
   background: rgba(255, 255, 255, 0.9);
@@ -923,8 +918,9 @@ section {
 .testimonials {
   padding: 80px 0;
   background: linear-gradient(-35deg, #522888, #Bf9553, #66369D);
-  background-size: 200% 200%;
-  animation: Animation 10s ease infinite;
+  background-position: center center;
+  background-size: cover;
+  position: relative;
 }
 .testimonials::before {
   content: "";
@@ -940,16 +936,13 @@ section {
 }
 .testimonials .testimonials-carousel, .testimonials .testimonials-slider {
   overflow: hidden;
+  background-color: whitesmoke;
+  max-width: 500px;
+  border-radius: 2rem;
 }
 .testimonials .testimonial-item {
   text-align: center;
-  color: #fff;
-}
-.testimonials .testimonial-item .testimonial-img {
-  width: 100px;
-  border-radius: 50%;
-  border: 6px solid rgba(255, 255, 255, 0.15);
-  margin: 0 auto;
+  color: black;
 }
 .testimonials .testimonial-item h2 {
   color: black;
@@ -958,7 +951,8 @@ section {
   font-size: 30px;
   font-weight: bold;
   margin: 10px 0 5px 0;
-  color: #343a40;
+  color: black;
+  margin-top: 3rem;
 }
 .testimonials .testimonial-item h4 {
   font-size: 14px;
@@ -984,16 +978,18 @@ section {
   font-style: italic;
   margin: 0 auto 15px auto;
   color: black;
+  font-size: medium;
   max-width: 500px;
 }
 .testimonials .swiper-pagination {
-  margin-top: 20px;
+  margin-top: 10px;
+  margin-bottom: 10px;
   position: relative;
 }
 .testimonials .swiper-pagination .swiper-pagination-bullet {
   width: 12px;
   height: 12px;
-  background-color: rgba(255, 255, 255, 0.5);
+  background-color: #Bf9553;
   opacity: 1;
 }
 .testimonials .swiper-pagination .swiper-pagination-bullet-active {
