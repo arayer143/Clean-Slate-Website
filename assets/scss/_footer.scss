@@ -12,7 +12,7 @@
 
     .footer-contact {
       h4 {
-        font-size: 22px;
+        font-size: 18px;
         margin: 0 0 30px 0;
         padding: 2px 0 2px 0;
         line-height: 1;
@@ -25,13 +25,14 @@
         margin-bottom: 0;
         font-family: $font-primary;
         color: lighten($default, 20);
+        text-align: center;
       }
       margin-bottom: 30px;
 
       .btn-contact{
         border-radius: 1rem;
         font-size: medium;
-        padding: 8px;
+        padding: 10px 35px;
         letter-spacing: 1px;
         color: black;
         background-color: $primary;
@@ -56,6 +57,13 @@
 
     }
 
+    h3{
+      color: $secondary;
+      font-weight:700;
+      font-size: 25px;
+      text-align: center;
+    }
+
     h4 {
       font-size: 16px;
       font-weight: bold;
@@ -66,6 +74,7 @@
 
     .footer-links {
       margin-bottom: 30px;
+      color: $secondary;
       ul{
         list-style: none;
         padding: 0;

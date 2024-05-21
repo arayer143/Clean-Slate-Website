@@ -178,6 +178,14 @@ section {
       color: lighten($secondary, 5);
       margin-bottom: 15px;
     }
+
+    h5{
+      margin-top: 2rem;
+      margin-bottom: -1.5rem;
+      color: $secondary;
+      font-weight: 500;
+      font-size: 20px;
+    }
   }
   
 
@@ -234,89 +242,7 @@ section {
     }
   }
 
-  .video-box {
-    background: url("../img/about-img.jpg") center center no-repeat;
-    background-size: cover;
-    min-height: 500px;
-  }
-
-  .play-btn {
-    width: 94px;
-    height: 94px;
-    background: radial-gradient( $primary 50%, rgba($primary, 0.4) 52%);
-    border-radius: 50%;
-    display: block;
-    position: absolute;
-    left: calc(50% - 47px);
-    top: calc(50% - 47px);
-    overflow: hidden;
-  }
-
-  .play-btn::after {
-    content: '';
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    transform: translateX(-40%) translateY(-50%);
-    width: 0;
-    height: 0;
-    border-top: 10px solid transparent;
-    border-bottom: 10px solid transparent;
-    border-left: 15px solid #fff;
-    z-index: 100;
-    transition: all 400ms cubic-bezier(0.55, 0.055, 0.675, 0.19);
-  }
-
-  .play-btn::before {
-    content: '';
-    position: absolute;
-    width: 120px;
-    height: 120px;
-    animation-delay: 0s;
-    animation: pulsate-btn 2s;
-    animation-direction: forwards;
-    animation-iteration-count: infinite;
-    animation-timing-function: steps;
-    opacity: 1;
-    border-radius: 50%;
-    border: 5px solid rgba($primary, 0.7);
-    top: -15%;
-    left: -15%;
-    background: rgba(198, 16, 0, 0);
-  }
-
-  .play-btn:hover::after {
-    border-left: 15px solid $primary;
-    transform: scale(20);
-  }
-
-  .play-btn:hover::before {
-    content: '';
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    transform: translateX(-40%) translateY(-50%);
-    width: 0;
-    height: 0;
-    border: none;
-    border-top: 10px solid transparent;
-    border-bottom: 10px solid transparent;
-    border-left: 15px solid #fff;
-    z-index: 200;
-    animation: none;
-    border-radius: 0;
-  }
-}
-
-@keyframes pulsate-btn {
-  0% {
-    transform: scale(0.6, 0.6);
-    opacity: 1
-  }
-  100% {
-    transform: scale(1, 1);
-    opacity: 0
-  }
+ 
 }
 
 
@@ -393,6 +319,53 @@ section {
   }
 }
 
+
+
+/*--------------------------------------------------------------
+# Cta
+--------------------------------------------------------------*/
+.cta {
+  background: $secondary;
+  background-size: cover;
+  padding: 60px 0;
+
+  h3 {
+    color: #fff;
+    font-size: 28px;
+    font-weight: 700;
+  }
+
+  p {
+    color: #fff;
+  }
+
+  .cta-btn {
+    font-family: $font-primary;
+    font-weight: 500;
+    font-size: 16px;
+    letter-spacing: 1px;
+    display: inline-block;
+    padding: 10px 35px;
+    background: $primary;
+    border-radius: 25px;
+    transition: 0.5s;
+    margin-top: 10px;
+    border: 2px solid $primary;
+    color: #fff;
+    &:hover {
+      background: lighten($color: $secondary, $amount: 30%);
+    }
+  }
+}
+
+
+
+
+
+
+
+
+
 /*--------------------------------------------------------------
 # Values
 --------------------------------------------------------------*/
@@ -462,7 +435,7 @@ section {
 --------------------------------------------------------------*/
 .testimonials {
   padding: 80px 0;
-  background: linear-gradient(-35deg, #522888, #Bf9553 , #66369D  );
+  background: linear-gradient(-15deg, #522888, #Bf9553 , #66369D  );
   background-position: center center;
   background-size: cover;
   position: relative;
