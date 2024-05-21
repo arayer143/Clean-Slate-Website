@@ -27,6 +27,33 @@
         color: lighten($default, 20);
       }
       margin-bottom: 30px;
+
+      .btn-contact{
+        border-radius: 1rem;
+        font-size: medium;
+        padding: 8px;
+        letter-spacing: 1px;
+        color: black;
+        background-color: $primary;
+
+        a{
+          color:black;
+
+        
+          &:hover{
+            color: white;
+          }
+        }
+
+        &:hover{
+          color: white;
+          background-color: $secondary;
+        }
+
+      }
+
+  
+
     }
 
     h4 {
@@ -156,8 +183,8 @@
       border-radius: 2rem;
       color: $white;
       background: $primary;
-      padding: 5px 10px;
-      display: inline-block;
+     text-align: center;
+
       transition: 0.3s;
 
       &:hover {

@@ -480,8 +480,14 @@ section {
     background: rgba(darken($secondary, 30), 0.5);
   }
 
-  .section-header {
-    margin-bottom: 40px;
+  .section-title h2 {
+    color: white;
+
+  }
+
+  .section-title p{
+    margin-top: 1rem;
+    color: white;
   }
 
   .testimonials-carousel, .testimonials-slider {
