@@ -428,6 +428,32 @@ section {
     }
   }
 
+  .btn{
+    font-family: $font-primary;
+    font-weight: 600;
+    font-size: 16px;
+    letter-spacing: 1px;
+    display: inline-block;
+ 
+    transition: 0.5s;
+    margin-top: 1rem;
+    text-align: center;
+    padding: 10px 26px 8px 26px;
+    color: #fff;
+    background: lighten($secondary, 6);
+    border-radius: 3rem;
+
+    &:hover{
+      color: $primary;
+    }
+
+
+
+
+  
+
+  }
+
 }
 
 /*--------------------------------------------------------------
