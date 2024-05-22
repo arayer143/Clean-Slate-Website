@@ -1235,6 +1235,7 @@ section {
   max-height: 440px;
   margin: -30px -30px 20px -30px;
   overflow: hidden;
+  text-align: center;
 }
 .blog .entry .entry-title {
   font-size: 28px;
@@ -1249,31 +1250,8 @@ section {
 .blog .entry .entry-title a:hover {
   color: #Bf9553;
 }
-.blog .entry .entry-meta {
-  margin-bottom: 15px;
-  color: #ceb8e7;
-}
-.blog .entry .entry-meta ul {
-  display: flex;
-  flex-wrap: wrap;
-  list-style: none;
-  align-items: center;
-  padding: 0;
-  margin: 0;
-}
-.blog .entry .entry-meta ul li + li {
-  padding-left: 20px;
-}
-.blog .entry .entry-meta i {
-  font-size: 16px;
-  margin-right: 8px;
-  line-height: 0;
-}
-.blog .entry .entry-meta a {
-  color: #656262;
-  font-size: 14px;
-  display: inline-block;
-  line-height: 1;
+.blog .entry .facebook-entry {
+  text-align: center;
 }
 .blog .entry .entry-content p {
   line-height: 24px;

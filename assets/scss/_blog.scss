@@ -6,7 +6,7 @@
   padding: 20px 0;
 
   .entry {
-
+  
     padding: 30px;
     margin-bottom: 60px;
     box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
@@ -15,6 +15,7 @@
       max-height: 440px;
       margin: -30px -30px 20px -30px;
       overflow: hidden;
+      text-align: center;
     }
 
     .entry-title {
@@ -33,35 +34,11 @@
 
     }
 
-    .entry-meta {
-      margin-bottom: 15px;
-      color: lighten($secondary, 40);
-      
-      ul {
-        display: flex;
-        flex-wrap: wrap;
-        list-style: none;
-        align-items: center;
-        padding: 0;
-        margin: 0;
-    
-        li + li {
-          padding-left: 20px;
-        }
-      }
-      i {
-        font-size: 16px;
-        margin-right: 8px;
-        line-height: 0;
-      }
 
-      a {
-        color: lighten($default, 20);
-        font-size: 14px;
-        display: inline-block;
-        line-height: 1;
-      }
+    .facebook-entry{
+      text-align: center;
     }
+
 
     .entry-content {
       p {
