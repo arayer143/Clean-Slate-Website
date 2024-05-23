@@ -4,31 +4,13 @@
 #hero {
   width: 100%;
   height: 90vh;
-  background: linear-gradient(-35deg, #522888, #Bf9553 , #66369D  );
-  background-size: 200% 200%;
- -webkit-animation: Animation 10s ease infinite;
-  -moz-animation: Animation 10s ease infinite;
-  animation: Animation 10s ease infinite;
+  background-image:  url('../img/after1.webp');
+  background-size: cover;
+  opacity: 0.8;
+  background-position: center center;
   position: relative;
-  z-index: 1;
   padding: 0;
   margin-bottom: -120px;
-
-  @-webkit-keyframes Animation {
-    0%{background-position:10% 0%}
-    50%{background-position:90% 100%}
-    100%{background-position:10% 0%}
-  }
-  @-moz-keyframes Animation {
-    0%{background-position:10% 0%}
-    50%{background-position:90% 100%}
-    100%{background-position:10% 0%}
-  }
-  @keyframes Animation { 
-    0%{background-position:10% 0%}
-    50%{background-position:90% 100%}
-    100%{background-position:10% 0%}
-  }
 
 
 
