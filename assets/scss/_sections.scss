@@ -258,7 +258,7 @@ section {
     margin-top: 35px;
     margin-bottom: 25px;
     text-align: center;
-    height: 200px;
+    height: 80%;
     position: relative;
     background: #fff;
     box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.10);
@@ -295,6 +295,12 @@ section {
     a {
       color: $black;
     }
+  }
+
+  span{
+    color: $primary;
+    font-weight: 700;
+    font-size: large;
   }
 
   .icon-box:hover  {

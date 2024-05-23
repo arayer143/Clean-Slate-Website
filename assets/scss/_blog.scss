@@ -173,7 +173,7 @@
     }
 
     h4 {
-      font-weight: 600;
+      font-weight: 400;
       font-size: 22px;
       margin-bottom: 0px;
       padding: 0;
@@ -334,6 +334,7 @@
     padding: 30px;
     margin: 0 0 60px 20px;
     box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+    
 
     .sidebar-title {
       font-size: 20px;
@@ -474,6 +475,11 @@
       }
     }
 
+
+  }
+  @media (max-width: 930px){
+    .sidebar{
+    display: none;}
   }
 
 }
