@@ -9,7 +9,7 @@
     "orientation": "portrait",
     "icons": [
         {
-            "src": "img/icons/jpg file (8).jpg",
+            "src": "assets/img/whitecleanslatelogo.jpg",
             "type": "image/png",
             "sizes": "144x144"
         }
@@ -25,7 +25,7 @@
           "label": "Clean Slate Logo"
         },
         {
-            "src": "img/cleanslatelogo.png",
+            "src": "assets/img/cleanslatelogo.png",
             "sizes": "2500x1500",
             "type": "image/png",
         
