@@ -27,11 +27,7 @@ class PHP_Email_Form {
 
   public $error_msg = array(
 
-    'invalid_subject' => 'Subject is too short or empty!',
 
-    'ajax_error' => 'Sorry, the request should be an Ajax POST',
-    'invalid_attachment_extension' => 'File extension not allowed, please choose:',
-    'invalid_attachment_size' => 'Max allowed attachment size is:'
   );
 
   private $error = false;
@@ -41,6 +37,16 @@ class PHP_Email_Form {
     $this->mailer = "forms@" . @preg_replace('/^www\./','', $_SERVER['SERVER_NAME']);
   }
 
+  public function add_message($content, $label = '', $length_check = false) {
+    if( $length_check ) {
+      if( strlen($content) < $length_check ) {
+        $this->error .=  $label . ' ' . $this->error_msg['short'] . '<br>';
+        return;
+      }
+    }
+    $content .= '<br>';
+
+  }
 
   public function option($name, $val) {
     $this->options[$name] = $val;
