@@ -29,7 +29,7 @@
   */
 
   $contact->add_message( $_POST['name'], 'From');
-  $contact->add_message( $_POST['phone'], 'phone');
+  $contact->add_message( $_POST['phone'], 'Phone');
 
 
   echo $contact->send();

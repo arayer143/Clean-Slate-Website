@@ -1819,9 +1819,15 @@ class PHPMailer
                 $this->ContentType = static::CONTENT_TYPE_MULTIPART_ALTERNATIVE;
             }
 
+            $this->setMessageType();
+            //Refuse to send an empty message unless we are specifically allowing it
+            if (!$this->AllowEmpty && empty($this->Body)) {
+                throw new Exception($this->lang('empty_message'), self::allow);
+            }
+
     
 
-            //Trim subject consistently
+            //Trim subje-ct consistently
             $this->Subject = trim($this->Subject);
             //Create body before headers in case body makes changes to headers (e.g. altering transfer encoding)
             $this->MIMEHeader = '';
@@ -3283,6 +3289,7 @@ class PHPMailer
 
         if ($this->isError()) {
             $body = '';
+            
          
         } elseif ($this->sign_key_file) {
             try {
