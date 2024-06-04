@@ -13,6 +13,7 @@ class PHP_Email_Form {
   public $subject = false;
   public $mailer = false;
   public $smtp = false;
+  public $message = '';
 
 
   public $content_type = 'text/html';
