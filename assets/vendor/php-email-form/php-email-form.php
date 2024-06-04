@@ -2548,7 +2548,6 @@ class PHPMailer
                 ' your php.ini, switch to MacOS or Linux, or upgrade your PHP to version 7.0.17+ or 7.1.3+.',
             'connect_host' => 'SMTP Error: Could not connect to SMTP host.',
             'data_not_accepted' => 'SMTP Error: data not accepted.',
-            'empty_message' => 'Message body empty',
             'encoding' => 'Unknown encoding: ',
             'execute' => 'Could not execute: ',
             'extension_missing' => 'Extension missing: ',
