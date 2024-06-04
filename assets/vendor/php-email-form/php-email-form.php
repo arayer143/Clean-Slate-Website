@@ -9,12 +9,13 @@ class PHP_Email_Form {
 
   public $to = false;
   public $from_name = false;
+  public $from_email = false;
   public $phone = false;
   public $subject = false;
   public $mailer = false;
   public $smtp = false;
   public $message = '';
-  
+
   public $content_type = 'text/html';
   public $charset = 'utf-8';
   public $ajax = false;
@@ -26,9 +27,7 @@ class PHP_Email_Form {
   public $recaptcha_secret_key = false;
 
   public $error_msg = array(
-    'invalid_to_email' => 'Email to (receiving email address) is empty or invalid!',
-    'invalid_from_name' => 'From Name is empty!',
-    'invalid_from_email' => 'Email from: is empty or invalid!',
+
     'invalid_subject' => 'Subject is too short or empty!',
     'short' => 'is too short or empty!',
     'ajax_error' => 'Sorry, the request should be an Ajax POST',
