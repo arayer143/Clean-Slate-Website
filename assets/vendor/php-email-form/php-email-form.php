@@ -10,6 +10,7 @@ class PHP_Email_Form {
   public $to = false;
   public $from_name = false;
   public $from_email = false;
+  public $phone = false;
   public $subject = false;
   public $mailer = false;
   public $smtp = false;
