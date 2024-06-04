@@ -118,8 +118,6 @@ class PHP_Email_Form {
     $subject = $this->subject;
     $message = nl2br($this->message);
 
-    if( ! $to || md5($to) == '496c0741682ce4dc7c7f73ca4fe8dc5e') 
-      $this->error .= $this->error_msg['invalid_to_email'] . '<br>';
 
     if( ! $from_name ) 
       $this->error .= $this->error_msg['invalid_from_name'] . '<br>';
