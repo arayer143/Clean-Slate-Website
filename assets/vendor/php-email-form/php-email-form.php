@@ -114,7 +114,7 @@ class PHP_Email_Form {
 
     $to = filter_var( $this->to, FILTER_VALIDATE_EMAIL);
     $from_name = $this->from_name;
-    $from_email = filter_var( $this->from_email, FILTER_VALIDATE_EMAIL);
+
     $subject = $this->subject;
     $message = nl2br($this->message);
 
@@ -123,9 +123,6 @@ class PHP_Email_Form {
 
     if( ! $from_name ) 
       $this->error .= $this->error_msg['invalid_from_name'] . '<br>';
-
-    if( ! $from_email ) 
-      $this->error .= $this->error_msg['invalid_from_email'] . '<br>';
 
     if( ! $subject ) 
       $this->error .= $this->error_msg['invalid_subject'] . '<br>';
@@ -181,7 +178,7 @@ class PHP_Email_Form {
       // Recipients
       $mail->setFrom( $this->mailer, $from_name );
       $mail->addAddress( $to );
-      $mail->addReplyTo( $from_email, $from_name );
+      $mail->addReplyTo( $from_name );
 
       // cc
       if(count($this->cc) > 0) {
