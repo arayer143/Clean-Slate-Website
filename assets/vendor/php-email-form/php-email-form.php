@@ -1819,11 +1819,7 @@ class PHPMailer
                 $this->ContentType = static::CONTENT_TYPE_MULTIPART_ALTERNATIVE;
             }
 
-            $this->setMessageType();
-            //Refuse to send an empty message unless we are specifically allowing it
-            if (!$this->AllowEmpty && empty($this->Body)) {
-                throw new Exception($this->lang('empty_message'), self::STOP_CRITICAL);
-            }
+    
 
             //Trim subject consistently
             $this->Subject = trim($this->Subject);
@@ -3287,9 +3283,7 @@ class PHPMailer
 
         if ($this->isError()) {
             $body = '';
-            if ($this->exceptions) {
-                throw new Exception($this->lang('empty_message'), self::STOP_CRITICAL);
-            }
+         
         } elseif ($this->sign_key_file) {
             try {
                 if (!defined('PKCS7_TEXT')) {
