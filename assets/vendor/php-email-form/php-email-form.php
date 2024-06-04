@@ -9,13 +9,12 @@ class PHP_Email_Form {
 
   public $to = false;
   public $from_name = false;
-  public $from_email = false;
   public $phone = false;
   public $subject = false;
   public $mailer = false;
   public $smtp = false;
   public $message = '';
-
+  
   public $content_type = 'text/html';
   public $charset = 'utf-8';
   public $ajax = false;
