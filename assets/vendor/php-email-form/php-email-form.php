@@ -112,7 +112,7 @@ class PHP_Email_Form {
     $from_name = $this->from_name;
 
     $subject = $this->subject;
-    $message = nl2br($this->message);
+  
 
 
     if( ! $from_name ) 
@@ -191,7 +191,7 @@ class PHP_Email_Form {
       // Content
       $mail->isHTML(true);
       $mail->Subject = $subject;
-      $mail->Body = $message;
+    
 
       // Options
       if(count($this->options) > 0) {
