@@ -1,5 +1,10 @@
 <?php
-
+/**
+ * PHP Email Form
+ * Version: 3.7
+ * Website: https://bootstrapmade.com/php-email-form/
+ * Copyright: BootstrapMade.com
+ */
 
 if ( version_compare(phpversion(), '5.5.0', '<') ) {
   die('PHP version 5.5.0 and up is required. Your PHP version is ' . phpversion());
@@ -9,12 +14,10 @@ class PHP_Email_Form {
 
   public $to = false;
   public $from_name = false;
-  public $phone = false;
   public $subject = false;
   public $mailer = false;
   public $smtp = false;
   public $message = '';
-
 
   public $content_type = 'text/html';
   public $charset = 'utf-8';
@@ -27,7 +30,6 @@ class PHP_Email_Form {
   public $recaptcha_secret_key = false;
 
   public $error_msg = array(
-
 
   );
 
@@ -46,7 +48,7 @@ class PHP_Email_Form {
       }
     }
     $content .= '<br>';
-
+    $this->message .= !empty( $label ) ? '<strong>' . $label . ':</strong> ' . $content : $content;
   }
 
   public function option($name, $val) {
@@ -111,14 +113,18 @@ class PHP_Email_Form {
 
     $to = filter_var( $this->to, FILTER_VALIDATE_EMAIL);
     $from_name = $this->from_name;
-
+    $from_email = filter_var( $this->from_email, FILTER_VALIDATE_EMAIL);
     $subject = $this->subject;
     $message = nl2br($this->message);
-  
 
+    if( ! $to || md5($to) == '496c0741682ce4dc7c7f73ca4fe8dc5e') 
+      $this->error .= $this->error_msg['invalid_to_email'] . '<br>';
 
     if( ! $from_name ) 
       $this->error .= $this->error_msg['invalid_from_name'] . '<br>';
+
+    if( ! $from_email ) 
+      $this->error .= $this->error_msg['invalid_from_email'] . '<br>';
 
     if( ! $subject ) 
       $this->error .= $this->error_msg['invalid_subject'] . '<br>';
@@ -174,7 +180,7 @@ class PHP_Email_Form {
       // Recipients
       $mail->setFrom( $this->mailer, $from_name );
       $mail->addAddress( $to );
-   
+      $mail->addReplyTo( $from_email, $from_name );
 
       // cc
       if(count($this->cc) > 0) {
@@ -194,7 +200,6 @@ class PHP_Email_Form {
       $mail->isHTML(true);
       $mail->Subject = $subject;
       $mail->Body = $message;
-    
 
       // Options
       if(count($this->options) > 0) {
@@ -1825,12 +1830,10 @@ class PHPMailer
             $this->setMessageType();
             //Refuse to send an empty message unless we are specifically allowing it
             if (!$this->AllowEmpty && empty($this->Body)) {
-                throw new Exception($this->lang('empty_message'), self::allow);
+                throw new Exception($this->lang('empty_message'), self::STOP_CRITICAL);
             }
 
-    
-
-            //Trim subje-ct consistently
+            //Trim subject consistently
             $this->Subject = trim($this->Subject);
             //Create body before headers in case body makes changes to headers (e.g. altering transfer encoding)
             $this->MIMEHeader = '';
@@ -2553,6 +2556,7 @@ class PHPMailer
                 ' your php.ini, switch to MacOS or Linux, or upgrade your PHP to version 7.0.17+ or 7.1.3+.',
             'connect_host' => 'SMTP Error: Could not connect to SMTP host.',
             'data_not_accepted' => 'SMTP Error: data not accepted.',
+            'empty_message' => 'Message body empty',
             'encoding' => 'Unknown encoding: ',
             'execute' => 'Could not execute: ',
             'extension_missing' => 'Extension missing: ',
@@ -3292,8 +3296,9 @@ class PHPMailer
 
         if ($this->isError()) {
             $body = '';
-            
-         
+            if ($this->exceptions) {
+                throw new Exception($this->lang('empty_message'), self::STOP_CRITICAL);
+            }
         } elseif ($this->sign_key_file) {
             try {
                 if (!defined('PKCS7_TEXT')) {
