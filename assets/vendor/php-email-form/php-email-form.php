@@ -178,7 +178,7 @@ class PHP_Email_Form {
       // Recipients
       $mail->setFrom( $this->mailer, $from_name );
       $mail->addAddress( $to );
-      $mail->addReplyTo( $from_name );
+
 
       // cc
       if(count($this->cc) > 0) {
