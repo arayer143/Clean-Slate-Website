@@ -435,10 +435,10 @@ h1, h2, h3, h4, h5, h6 {
   width: 100vw;
   height: 100vh;
   background-image: url("../img/cleanslatebanner.jpg");
-  background-size: cover;
-  background-repeat: no-repeat;
+  background-size: 100% cover;
   opacity: 0.8;
   background-position: center;
+  background-repeat: no-repeat;
   position: relative;
   padding: 0;
   margin-bottom: -120px;
