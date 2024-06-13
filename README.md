@@ -1,6 +1,12 @@
 Clean Slate Website
 
 
+
+screenshot:
+![image](https://github.com/arayer143/Clean-Slate-Website/assets/89434892/c1fefca9-7f5d-45c7-8f05-ca27712e5f48)
+
+
+
 Website for the Pressure Washing Company Clean Slate. 
 
 
