@@ -5,15 +5,18 @@
   width: 100vw;
   height: 100vh;
   background-image:  url('../img/cleanslatebanner.jpg');
-  background-size: 100% cover;
+  background-size: 100% 100%;
   opacity: 0.8;
   background-position: center;
   background-repeat: no-repeat;
   position: relative;
   padding: 0;
   margin-bottom: -120px;
+  background-color: lighten($secondary, 10);
 
-
+@media (max-width:1100px){
+  background-size: cover;
+}
 
 
 
