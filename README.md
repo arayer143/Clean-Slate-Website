@@ -2,8 +2,6 @@ Clean Slate Website
 
 
 
-screenshot:
-![image](https://github.com/arayer143/Clean-Slate-Website/assets/89434892/c1fefca9-7f5d-45c7-8f05-ca27712e5f48)
 
 
 
@@ -26,3 +24,15 @@ This Website uses :
 <img alt="Bootstrap" src="https://img.shields.io/badge/bootstrap%20-%23563D7C.svg?&style=for-the-badge&logo=bootstrap&logoColor=white" style="margin:2px;"/>
 
 </div>
+
+
+
+
+
+
+
+
+
+screenshot:
+![image](https://github.com/arayer143/Clean-Slate-Website/assets/89434892/c1fefca9-7f5d-45c7-8f05-ca27712e5f48)
+
