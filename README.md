@@ -14,7 +14,7 @@ Live website:
 
 
 
-This Website uses : 
+This Website uses these languages: 
 
 <div class="center">
 
