@@ -32,9 +32,9 @@ This Website uses these languages:
 
 JavaScript Libraries:
 
-Animate on Scroll (AOS): https://michalsnik.github.io/aos/
-GLightbox: https://biati-digital.github.io/glightbox/
-Swiper: https://swiperjs.com/
+Animate on Scroll (AOS): https://michalsnik.github.io/aos/ <br>
+GLightbox: https://biati-digital.github.io/glightbox/ <br>
+Swiper: https://swiperjs.com/ <br>
 
 
 
