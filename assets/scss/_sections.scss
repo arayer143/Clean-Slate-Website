@@ -435,12 +435,12 @@ section {
   }
 
   .btn{
-    font-family: $font-primary;
+   
     font-weight: 600;
     font-size: 16px;
     letter-spacing: 1px;
     display: inline-block;
- 
+    color: black;
     transition: 0.5s;
     margin-top: 1rem;
     text-align: center;
@@ -451,6 +451,11 @@ section {
 
     &:hover{
       color: $primary;
+    }
+
+
+    a{
+      color: white;
     }
 
 

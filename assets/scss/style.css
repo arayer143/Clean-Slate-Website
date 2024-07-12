@@ -890,11 +890,11 @@ section {
   color: #fff;
 }
 .values .btn {
-  font-family: "Raleway", sans-serif;
   font-weight: 600;
   font-size: 16px;
   letter-spacing: 1px;
   display: inline-block;
+  color: black;
   transition: 0.5s;
   margin-top: 1rem;
   text-align: center;
@@ -905,6 +905,9 @@ section {
 }
 .values .btn:hover {
   color: #Bf9553;
+}
+.values .btn a {
+  color: white;
 }
 
 /*--------------------------------------------------------------
