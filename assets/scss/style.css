@@ -475,23 +475,33 @@ h1, h2, h3, h4, h5, h6 {
   z-index: 99;
 }
 #hero h1 {
-  margin: 0 0 10px 0;
+  margin: 0 0 20px 0;
   font-size: 48px;
   font-weight: 700;
   line-height: 56px;
   color: #fff;
+}
+@media (max-width: 425px) {
+  #hero h1 {
+    text-align: center;
+  }
 }
 #hero h2 {
   color: #eee;
   margin-bottom: 50px;
   font-size: 24px;
 }
+@media (max-width: 425px) {
+  #hero h2 {
+    text-align: center;
+  }
+}
 #hero img {
   max-height: 250px;
 }
 #hero .btn-get-started {
   font-family: "Raleway", sans-serif;
-  font-weight: 600;
+  font-weight: 400;
   margin-right: 0.5rem;
   font-size: 16px;
   letter-spacing: 1px;
@@ -507,6 +517,15 @@ h1, h2, h3, h4, h5, h6 {
 }
 #hero .btn-get-started:hover {
   background: #Bf9553;
+}
+@media (max-width: 425px) {
+  #hero .btn-get-started {
+    font-size: 14px;
+    text-align: center;
+    display: block;
+    margin-left: 4rem;
+    margin-right: 4rem;
+  }
 }
 @media (min-width: 1024px) {
   #hero {
