@@ -434,7 +434,7 @@ h1, h2, h3, h4, h5, h6 {
 #hero {
   width: 100vw;
   height: 100vh;
-  background-image: url("../img/cleanslatebanner.jpg");
+  background-image: url("../img/cleanslatebanner.webp");
   background-size: 100% 100%;
   opacity: 0.8;
   background-position: center;
