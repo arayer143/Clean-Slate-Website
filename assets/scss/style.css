@@ -121,7 +121,8 @@ h1, h2, h3, h4, h5, h6 {
   color: #Bf9553;
 }
 #topbar .cta a {
-  color: #fff;
+  color: black;
+  font-weight: 500;
   background: #Bf9553;
   padding: 10px 20px;
   display: inline-block;
