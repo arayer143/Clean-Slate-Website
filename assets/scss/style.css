@@ -1716,15 +1716,21 @@ section {
   text-align: center;
 }
 #footer .footer-top .footer-contact .btn-contact {
-  border-radius: 1rem;
-  font-size: medium;
-  padding: 10px 35px;
+  font-family: "Raleway", sans-serif;
+  font-weight: 600;
+  font-size: 16px;
   letter-spacing: 1px;
-  color: black;
-  background-color: #Bf9553;
+  display: inline-block;
+  padding: 10px 35px;
+  background: #Bf9553;
+  border-radius: 25px;
+  transition: 0.5s;
+  margin-top: 10px;
+  border: 2px solid #Bf9553;
+  color: #fff;
 }
 #footer .footer-top .footer-contact .btn-contact a {
-  color: black;
+  color: white;
 }
 #footer .footer-top .footer-contact .btn-contact a:hover {
   color: white;
@@ -1778,48 +1784,6 @@ section {
 #footer .footer-top .footer-links ul a:hover {
   text-decoration: none;
   color: #Bf9553;
-}
-#footer .footer-newsletter {
-  font-size: 15px;
-}
-#footer .footer-newsletter h4 {
-  font-size: 16px;
-  font-weight: bold;
-  color: #313030;
-  position: relative;
-  padding-bottom: 12px;
-}
-#footer .footer-newsletter form {
-  margin-top: 30px;
-  background: #fff;
-  padding: 6px 10px;
-  position: relative;
-  border-radius: 50px;
-  text-align: left;
-  border: 1px solid #f1e7d9;
-}
-#footer .footer-newsletter form input[type=email] {
-  border: 0;
-  padding: 4px 8px;
-  width: calc(100% - 100px);
-}
-#footer .footer-newsletter form input[type=submit] {
-  position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  border: 0;
-  background: none;
-  font-size: 16px;
-  padding: 0 20px;
-  background: #Bf9553;
-  color: #fff;
-  transition: 0.3s;
-  border-radius: 50px;
-  box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.1);
-}
-#footer .footer-newsletter form input[type=submit]:hover {
-  background: #a37b3c;
 }
 #footer .credits {
   padding-top: 5px;
