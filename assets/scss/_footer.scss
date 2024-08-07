@@ -152,12 +152,18 @@
 
   .copyright{
     button{
-      border-radius: 2rem;
-      color: $white;
+      font-family: $font-primary;
+      font-weight: 600;
+      font-size: 16px;
+      letter-spacing: 1px;
+      display: inline-block;
+      padding: 10px 15px;
       background: $primary;
-     text-align: center;
-
-      transition: 0.3s;
+      border-radius: 25px;
+      transition: 0.5s;
+      margin-top: 10px;
+      border: 2px solid $primary;
+      color: #fff;
 
       &:hover {
         background: lighten($primary, 5);
