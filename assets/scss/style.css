@@ -262,7 +262,7 @@ h1, h2, h3, h4, h5, h6 {
   align-items: center;
   justify-content: space-between;
   padding: 10px 0 10px 30px;
-  font-size: 14px;
+  font-size: 18px;
   font-family: "Poppins", sans-serif;
   color: #7f46c0;
   white-space: nowrap;
@@ -275,6 +275,9 @@ h1, h2, h3, h4, h5, h6 {
 }
 .navbar a:hover, .navbar .active, .navbar .active:focus, .navbar li:hover > a {
   color: #Bf9553;
+  -webkit-text-decoration: underline 2px;
+          text-decoration: underline 2px;
+  text-underline-offset: 4px;
 }
 .navbar .getstarted, .navbar .getstarted:focus {
   background: #Bf9553;

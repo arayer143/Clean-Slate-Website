@@ -25,7 +25,7 @@
     align-items: center;
     justify-content: space-between;
     padding: 10px 0 10px 30px;
-    font-size: 14px; 
+    font-size: 18px; 
     font-family: $font-secondary;
     color: lighten($secondary, 10);
     white-space: nowrap;
@@ -40,6 +40,8 @@
 
   a:hover, .active, .active:focus, li:hover > a  {
     color: $primary;
+    text-decoration: underline 2px;
+    text-underline-offset: 4px;
   }
 
   .getstarted, .getstarted:focus {
