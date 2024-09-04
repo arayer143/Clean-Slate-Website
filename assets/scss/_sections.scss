@@ -347,7 +347,7 @@ section {
 
   .cta-btn {
     font-family: $font-primary;
-    font-weight: 500;
+    font-weight: 600;
     font-size: 16px;
     letter-spacing: 1px;
     display: inline-block;
@@ -357,7 +357,7 @@ section {
     transition: 0.5s;
     margin-top: 10px;
     border: 2px solid $primary;
-    color: #fff;
+    color: black;
     &:hover {
       background: lighten($color: $secondary, $amount: 30%);
     }
