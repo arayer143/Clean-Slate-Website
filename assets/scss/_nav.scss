@@ -27,7 +27,7 @@
     padding: 10px 0 10px 30px;
     font-size: 18px; 
     font-family: $font-secondary;
-    color: lighten($secondary, 10);
+    color: black;
     white-space: nowrap;
     transition: 0.3s;
 
@@ -39,7 +39,7 @@
   }
 
   a:hover, .active, .active:focus, li:hover > a  {
-    color: $primary;
+    color: black;
     text-decoration: underline 2px;
     text-underline-offset: 4px;
   }
