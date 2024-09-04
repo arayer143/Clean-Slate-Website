@@ -15,7 +15,7 @@ section {
   text-align: center;
   padding-bottom: 30px;
 }
-.section-title h2 {
+.section-title h1 {
   font-size: 22px;
   font-weight: bold;
   text-transform: uppercase;
@@ -24,7 +24,7 @@ section {
   position: relative;
   color: rgb(56, 56, 56);
 }
-.section-title h2::before {
+.section-title h1::before {
   content: "";
   position: absolute;
   display: block;
@@ -34,7 +34,7 @@ section {
   bottom: 1px;
   left: calc(50% - 60px);
 }
-.section-title h2::after {
+.section-title h1::after {
   content: "";
   position: absolute;
   display: block;
@@ -609,88 +609,6 @@ section {
 
 
 
-/*--------------------------------------------------------------
-# F.A.Q
---------------------------------------------------------------*/
-.faq  {
-
-  .faq-list {
-    padding: 0 100px;
-    ul {
-      padding: 0;
-      list-style: none;
-    }
-
-    li + li {
-      margin-top: 15px;
-    }
-
-    li {
-      padding: 20px;
-      background: #fff;
-      border-radius: 4px;
-      position: relative;
-    }
-
-    a {
-      display: block;
-      position: relative;
-      font-family: $font-secondary;
-      font-size: 16px;
-      line-height: 24px;
-      font-weight: 500;
-      padding: 0 30px;
-      outline: none;
-      cursor: pointer;
-    }
-
-    .icon-help {
-      font-size: 24px;
-      position: absolute;
-      right: 0;
-      left: 20px;
-      color: lighten($primary, 25);
-    }
-
-    .icon-show, .icon-close {
-      font-size: 24px;
-      position: absolute;
-      right: 0;
-      top: 0;
-    }
-
-    p {
-      margin-bottom: 0;
-      padding: 10px 0 0 0;
-    }
-
-    .icon-show {
-      display: none;
-    }
-
-
-    a.collapsed {
-      color: $black;
-      &:hover {
-        color: $primary;
-      }
-
-      .icon-show {
-        display: inline-block;
-      }
-
-      .icon-close {
-        display: none;
-      }
-    }
-  }
-
-  @media (max-width: 1200px) {
-    .faq-list {
-      padding: 0;
-    }
-  }
-}
 
 /*--------------------------------------------------------------
 # Contact
