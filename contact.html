@@ -42,17 +42,6 @@
 </head>
 
 
-<!--Script for contact section "Other:" class to pop up text box -->
-
-<script>
-  function toggleField(hideObj,showObj){
-    hideObj.disabled=true;        
-    hideObj.style.display='none';
-    showObj.disabled=false;   
-    showObj.style.display='inline';
-    showObj.focus();
-  }
-  </script>
 
 
 
@@ -161,7 +150,7 @@
               toggleField(this,this.nextSibling);
 this.selectedIndex='0';
           }">
-            <option>Select Service </option>
+            <option class="btn btn-primary dropdown-toggle">Select Service</option>
             
             <option>House/Building Washing</option>
             <option>Roof Washing</option>

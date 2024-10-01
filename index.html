@@ -725,62 +725,84 @@
       <div class="container">
 
         <div class="section-title">
-          <h2 data-aos="fade-up">Contact</h2>
+          <h1 data-aos="fade-up">Contact</h1>
           <p data-aos="fade-up">Contact us today for a Free Estimate</p>
         </div>
 
         <div class="row justify-content-center">
 
- 
-
-          <div class="col-xl-3 col-lg-4 mt-4" data-aos="fade-up" data-aos-delay="100">
-            <div class="info-box">
-              <i class="bx bx-envelope"></i>
-             
-              <a href="mailto:Rickeynaquin@cleanslatepressurewashingnola.com">Email Us</a>
-            </div>
-          </div>
           <div class="col-xl-3 col-lg-4 mt-4" data-aos="fade-up" data-aos-delay="200">
             <div class="info-box">
               <i class="bx bx-phone-call"></i>
-           
-              <a href="tel:5043527963" class="btn-get-started scrollto">Call</a>
+             
+              <a href="mailto:rickeynaquin@cleanslatepressurewashingnola.com" class="btn-get-started scrollto">Email</a>
+            </div>
+          </div>
+
+          <div class="col-xl-3 col-lg-4 mt-4" data-aos="fade-up" data-aos-delay="200">
+            <div class="info-box">
+              <i class="bx bx-phone-call"></i>
+             
+              <a href="tel:(504) 352-7963" class="btn-get-started scrollto">Call</a>
             </div>
           </div>
         </div>
-
         <div class="row justify-content-center" data-aos="fade-up" data-aos-delay="300">
-          <div class="col-xl-9 col-lg-12 mt-4">
-            <form action="forms/contact.php" method="post" role="form" class="php-email-form">
-              <div class="row">
-                <div class="col-md-6 form-group">
-                  <input type="text" name="name" class="form-control" id="name" placeholder="Your Name" required>
-                </div>
-                <div class="col-md-6 form-group mt-3 mt-md-0">
-                  <input type="text" class="form-control" name="phone" id="phone" placeholder="Your Phone Number" required>
-                </div>
-              </div>
-              <div class="form-group mt-3">
-                <input type="text" class="form-control" name="subject" id="subject" placeholder="What Service are you interested in?" required>
-              </div>
+            <div class="col-xl-9 col-lg-12 mt-4">
 
-              <div class="form-group mt-3">
-                <textarea class="form-control" name="message" rows="3" placeholder="Message"></textarea>
-              </div>
+
+              <form action="forms/contact.php" method="post" role="form" class="php-email-form" enctype="multipart/form-data">
+                <div class="row">
+                  <div class="col-md-6 form-group">
+                    <input type="text" name="name" class="form-control" id="name" placeholder="Your Name" required>
+                  </div>
+                  <div class="col-md-6 form-group mt-3 mt-md-0">
+                    <input type="phone" class="form-control" name="phone" id="phone" placeholder="Your Phone Number" required>
+                  </div>
+                </div>
+                <div class="col-md-6 form-group mt-3">
+                  <select name="subject" class="form-control" onchange="if(this.options[this.selectedIndex].value=='customOption'){
+              
+              toggleField(this,this.nextSibling);
+this.selectedIndex='0';
+          }">
+             <option class="btn btn-primary dropdown-toggle">Select Service</option>
+            
+            <option>House/Building Washing</option>
+            <option>Roof Washing</option>
+            <option>Concrete Washing</option>
+            <option>Gutter Cleaning</option>
+            <option>Window Cleaning</option>
+            <option>Fence Washing</option>
+            <option>Patio Cleaning</option>
+            <option value="customOption">Other:</option>
+        </select><input name="service" style="display:none;" disabled="disabled" 
+            onblur="if(this.value==''){toggleField(this,this.previousSibling);}">
+
+                </div>
        
-              <div class="my-3">
-                <div class="loading">Loading</div>
-                <div class="error-message"></div>
-                <div class="sent-message">Your message has been sent. Thank you!</div>
-              </div>
-              <div class="text-center"><button type="submit">Send Message</button></div>
-            </form>
-          </div>
+          
 
-        </div>
+              
+
+                <div class="form-group mt-3">
+                  <textarea class="form-control" name="message" rows="3" placeholder="Message"></textarea>
+                </div>
+            
+                <div class="my-3">
+                  <div class="loading">Loading</div>
+                  <div class="error-message"></div>
+                  <div class="sent-message">Your message has been sent. Thank you!</div>
+                </div>
+                <div class="text-center"><button type="submit">Send Message</button></div>
+              </form>
+            </div>
+  
+          </div>
 
       </div>
     </section><!-- End Contact Section -->
+
 
   </main><!-- End #main -->
 
