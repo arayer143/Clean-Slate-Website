@@ -231,9 +231,6 @@
 
 
 
-  /**
-   * Other option for contact section 
-   */
 
 
 })()

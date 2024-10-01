@@ -41,9 +41,16 @@
 
 </head>
 
-
-
-
+<!--Script for the contact section to bring up text box when "other" is selected-->
+<script>
+  function toggleField(hideObj,showObj){
+    hideObj.disabled=true;        
+    hideObj.style.display='none';
+    showObj.disabled=false;   
+    showObj.style.display='inline';
+    showObj.focus();
+  }
+  </script>
 
 
 <body>
