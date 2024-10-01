@@ -42,6 +42,18 @@
 </head>
 
 
+<!--Script for contact section "Other:" class to pop up text box -->
+
+<script>
+  function toggleField(hideObj,showObj){
+    hideObj.disabled=true;        
+    hideObj.style.display='none';
+    showObj.disabled=false;   
+    showObj.style.display='inline';
+    showObj.focus();
+  }
+  </script>
+
 
 
 
@@ -143,7 +155,7 @@
                     <input type="phone" class="form-control" name="phone" id="phone" placeholder="Your Phone Number" required>
                   </div>
                 </div>
-                <div class="col-md-3 form-group mt-3">
+                <div class="col-md-6 form-group mt-3">
                   <select name="subject" class="form-control" onchange="if(this.options[this.selectedIndex].value=='customOption'){
               
               toggleField(this,this.nextSibling);
@@ -151,13 +163,15 @@ this.selectedIndex='0';
           }">
             <option>Select Service </option>
             
-            <option>Chrome</option>
-            <option>Firefox</option>
-            <option>Internet Explorer</option>
-            <option>Opera</option>
-            <option>Safari</option>
-            <option value="customOption">Other </option>
-        </select><input name="browser" style="display:none;" disabled="disabled" 
+            <option>House/Building Washing</option>
+            <option>Roof Washing</option>
+            <option>Concrete Washing</option>
+            <option>Gutter Cleaning</option>
+            <option>Window Cleaning</option>
+            <option>Fence Washing</option>
+            <option>Patio Cleaning</option>
+            <option value="customOption">Other:</option>
+        </select><input name="service" style="display:none;" disabled="disabled" 
             onblur="if(this.value==''){toggleField(this,this.previousSibling);}">
 
                 </div>
