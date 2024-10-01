@@ -41,6 +41,10 @@
 
 </head>
 
+
+
+
+
 <body>
 
   <!-- ======= Top Bar ======= -->
@@ -128,7 +132,9 @@
         </div>
         <div class="row justify-content-center" data-aos="fade-up" data-aos-delay="300">
             <div class="col-xl-9 col-lg-12 mt-4">
-              <form action="forms/contact.php" method="post" role="form" class="php-email-form">
+
+
+              <form action="forms/contact.php" method="post" role="form" class="php-email-form" enctype="multipart/form-data">
                 <div class="row">
                   <div class="col-md-6 form-group">
                     <input type="text" name="name" class="form-control" id="name" placeholder="Your Name" required>
@@ -137,9 +143,28 @@
                     <input type="email" class="form-control" name="email" id="email" placeholder="Your Phone Number" required>
                   </div>
                 </div>
-                <div class="form-group mt-3">
-                  <input type="text" class="form-control" name="subject" id="subject" placeholder="What Service are you interested in?" required>
+                <div class="col-md-3 form-group mt-3">
+                  <select name="subject" class="form-control" 
+          onchange="if(this.options[this.selectedIndex].value=='customOption'){
+              toggleField(this,this.nextSibling);
+              this.selectedIndex='0';
+          }">
+            <option>Select Service </option>
+            
+            <option>Chrome</option>
+            <option>Firefox</option>
+            <option>Internet Explorer</option>
+            <option>Opera</option>
+            <option>Safari</option>
+            <option value="customOption">Other </option>
+        </select><input name="browser" style="display:none;" disabled="disabled" 
+            onblur="if(this.value==''){toggleField(this,this.previousSibling);}">
+
                 </div>
+       
+          
+
+              
 
                 <div class="form-group mt-3">
                   <textarea class="form-control" name="message" rows="3" placeholder="Message"></textarea>
